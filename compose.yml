@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+ app:
+  image: node:20
+  container_name: oraclette_front
+  command: npm start
+  working_dir: /app
+  ports:
+   - 8080:8080
+  volumes:
+   - .:/app
+   - /app/node_modules
